@@ -1,6 +1,6 @@
 [Flatpak Repo]
 Title=HyprFM
-Url=https://hyprfm.soyebjim.me/repo/
+Url=https://flatpak.hyprfm.soyebjim.me/repo/
 Homepage=https://github.com/soyeb-jim285/hyprfm
 Description=Self-hosted Flatpak repository for HyprFM, a lightweight Qt6/QML file manager for Hyprland and other Wayland compositors.
 Comment=HyprFM (self-hosted)
