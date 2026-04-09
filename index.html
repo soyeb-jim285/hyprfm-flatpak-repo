@@ -18,13 +18,23 @@
 <h1>HyprFM</h1>
 <p class="sub">A lightweight Qt6/QML file manager for Hyprland and other Wayland compositors.</p>
 
-<p>This page hosts a self-signed Flatpak repository for HyprFM. To install:</p>
+<p>This page hosts a self-signed Flatpak repository for HyprFM. HyprFM depends on
+the KDE Platform runtime from Flathub, so the Flathub remote must exist at the
+<strong>same scope</strong> you install into. For a <code>--user</code> install, add Flathub at
+user scope first:</p>
 
 <pre><code>flatpak remote-add --user --if-not-exists \
+    flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --user --if-not-exists \
     hyprfm https://hyprfm.soyebjim.me/hyprfm.flatpakrepo
 flatpak install --user hyprfm io.github.soyeb_jim285.HyprFM</code></pre>
 
 <p>After the initial install, new releases are picked up by <code>flatpak update</code>.</p>
+
+<p>If your Flathub remote only exists at system scope, a <code>--user</code> install of
+HyprFM will fail with an error about <code>org.kde.Platform</code> not being installed.
+Either add Flathub at user scope as above, or drop every <code>--user</code> flag (and
+prefix the install command with <code>sudo</code>) to install system-wide.</p>
 
 <hr>
 
